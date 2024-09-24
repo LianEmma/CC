@@ -78,23 +78,23 @@ let stopHeroslider=()=>{
 startAutoPlayHeroSlider();
 
 let currentSlide = 0;
-const slides = document.querySelectorAll(".hero-slide");
+const Hslides = document.querySelectorAll(".hero-slide");
 const dots = document.querySelectorAll(".dot");
 
 const changeSlide = (index) => {
-    slides[currentSlide].classList.remove("active");
+    Hslides[currentSlide].classList.remove("active");
     dots[currentSlide].classList.remove("active");
     currentSlide = index;
-    slides[currentSlide].classList.add("active");
+    Hslides[currentSlide].classList.add("active");
     dots[currentSlide].classList.add("active");
 };
 
 document.querySelector(".next-slide").addEventListener("click", () => {
-    changeSlide((currentSlide + 1) % slides.length);
+    changeSlide((currentSlide + 1) % Hslides.length);
 });
 
 document.querySelector(".prev-slide").addEventListener("click", () => {
-    changeSlide((currentSlide - 1 + slides.length) % slides.length);
+    changeSlide((currentSlide - 1 + Hslides.length) % Hslides.length);
 });
 
 dots.forEach(dot => {
