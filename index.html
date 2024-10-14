@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celestial Chorale.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/anim.css">
+    <link rel="stylesheet" href="css/arr.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+</head>
+<body>
+<main>
+
+
+    <header>
+            <nav>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/chorale2.jpg" alt="">
+                    </a>
+                </div>
+                
+                <div class="links">
+                    <a href="#">Home</a>
+                    <a href="About.html">About</a>
+                    <a href="Events.html">Events</a>
+                    <a href="Gallery.html">Gallery</a>
+                    <a href="Contact.html">Contact</a>
+                </div>
+
+                <div class="account">
+                    <div class="acc">
+                       <img src="man-placeholder.png" alt="photo">
+                        <button>
+                            <i class="fas fa-chevron-down"></i>
+                            <i class="fas fa-chevron-up hidden"></i>
+                        </button>
+                    </div>
+
+                    <div class="signs">
+                        <p class="sign-in">sign in</p>
+                        <p class="sign-up">sign up</p>
+                    </div>
+                </div>
+
+                <!-----------------drop down-------------------->
+                <div class="drop-down">
+
+                    <div class="accountD">
+                        <div class="acc">
+                           <img src="man-placeholder.png" alt="photo">
+                            <button>
+                                <i class="fas fa-chevron-down"></i>
+                                <i class="fas fa-chevron-up hidden"></i>
+                            </button>
+                        </div>
+    
+                        <div class="signsD">
+                            <p class="sign-in">sign in</p>
+                            <p class="sign-up">sign up</p>
+                        </div>
+                    </div>
+
+
+                    <div class="linksD">
+                        <a href="#">Home</a>
+                        <a href="About.html">About</a>
+                        <a href="Events.html">Events</a>
+                        <a href="Gallery.html">Gallery</a>
+                        <a href="Contact.html">Contact</a>
+                    </div>
+                </div>
+                <!------------bars------------->
+                <div class="bars">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </nav>
+
+    </header>
+        <!---------------Hero Section----------------->
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background-image: url(images/Grazioso_110_2.jpg);">
+                <div class="slide-content">
+                    <div>
+                        <h2>EXPERIENCE GOD THROUGH MUSIC <br> WITH CHORALE MINISTRIES</h2>
+                        <p>
+                            At Chorale Ministries, we believe music is a divine connection that inspires, uplifts, and brings people closer to God. Join us in worship through melodious symphonies and heartfelt harmonies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide" style="background-image: url(images/110_E.jpg);">
+                <div class="slide-content">
+                    <div>
+                        <h2>UNITING HEARTS IN PRAISE</h2>
+                        <p>
+                            Our choir unites voices from diverse backgrounds, all with a shared mission—to glorify God through music. We create an atmosphere of worship that transcends the stage and resonates within every soul.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide" style="background-image: url(images/Image-2024-02-20.jpeg);">
+                <div class="slide-content">
+                    <div>
+                        <h2>JOIN OUR JOURNEY OF PRAISE</h2>
+                        <p>
+                            Whether you are a performer or a listener, Chorale Ministries invites you to be a part of this incredible journey. Feel the presence of God through every note and rhythm.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Manual controls -->
+            <button class="prev-slide" aria-label="Previous Slide">&#10094;</button>
+            <button class="next-slide" aria-label="Next Slide">&#10095;</button>
+        
+            <!-- Navigation dots -->
+            <div class="nav-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </div>
+        
+
+    <!--------------Dedication to Music----------------->
+    <section class="dedic">
+        <div class="dedication">
+            <div class="dedication-content">
+                <h2>Our Dedication To Music</h2>
+                <p>
+                    The Symphonials is continually motivated to hold events that
+                    re-emphasize our dedication to feeding the soul with good music.
+                    We are hopeful that the people we minister to,
+                    will forever benefit from the soothing nature of sound music, 
+                    rendered by our dedicated choir. Keep listening.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!--------------Featured Performances----------------->
+    <section>
+        <div class="Performances">
+            <div class="Performances-content">
+                <h2 class="animated fade-in slow">Featured Live Performances, and recordings</h2>
+                <p class="animated zoom-in">
+                    The Symphonials is continually motivated to hold events that..
+                </p>
+            </div>
+
+            <div class="performances-img" style="background-image: url(images/28.jpg);">
+                <img id="img_youtube" src="images/yt_icon_mono_dark.png">
+            </div>
+        </div>
+    </section>
+
+
+<!---------------proggrams----------->
+<section class="arr">
+    <div class="mem-slider">
+        <!-- The active slide will be placed here by JS initially -->
+    </div>
+
+    <div class="slides">
+        <div class="slide active" id="slide-one" style="background-image: url(images/28.jpg);">
+            <div class="content">
+                <h2>Annual Concert</h2>
+                <p>
+                    Our Annual Concert is a grand celebration that brings together the best of our chorale's performances, showcasing a diverse range of musical genres. Join us as we take you on a musical journey through a blend of classic and contemporary pieces.
+                </p>
+            </div>
+        </div>
+        
+        <div class="slide" id="slide-two" style="background-image: url(images/110_E.jpg);">
+            <div class="content">
+                <h2>Community Outreach</h2>
+                <p>
+                    We believe in the power of music to connect and inspire. Our Community Outreach program brings the joy of music to schools, hospitals, and local communities, spreading harmony and uplifting spirits through our performances.
+                </p>
+            </div>
+        </div>
+        
+        <div class="slide" id="slide-three" style="background-image: url(images/141_E.jpg);">
+            <div class="content">
+                <h2>Youth Choir Program</h2>
+                <p>
+                    Our Youth Choir Program nurtures the next generation of musical talent, providing young singers with the opportunity to develop their vocal skills, build confidence, and experience the joy of performing as part of a choir.
+                </p>
+            </div>
+        </div>
+        
+        <div class="slide" id="slide-four" style="background-image: url(images/SYMGH-199.jpg);">
+            <div class="content">
+                <h2>Music Therapy Sessions</h2>
+                <p>
+                    Music has the power to heal and comfort. Our Music Therapy Sessions offer a space for relaxation and emotional expression, helping participants to cope with stress, anxiety, and emotional challenges through the therapeutic power of music.
+                </p>
+            </div>
+        </div>
+        
+        <div class="slide" id="slide-five" style="background-image: url(images/IMG_3636.JPG);">
+            <div class="content">
+                <h2>Christmas Carols</h2>
+                <p>
+                    Celebrate the festive season with us as we perform timeless Christmas Carols. Our choir spreads holiday cheer with a blend of traditional and modern carols, creating a warm and joyful atmosphere for everyone.
+                </p>
+            </div>
+        </div>
+    </div>
+ </section>
+    
+
+<!-- Event Calendar Section -->
+<section>
+    <div class="events-sub">
+        <div>
+            <h2>Upcoming Events</h2>
+             <!-----events card 01-->
+           <div class="upcoming-cards">
+             <div class="card">
+                <div class="img">
+                    <img src="images/28.jpg" alt="">
+                </div>
+
+                <div class="date">
+                    <div class="date-d">
+                        <p>03</p> | <p>Sept</p> | <p>2024</p>
+                    </div>
+                </div>
+
+                <div class="cont">
+                    <h4>Procession</h4>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, sit!
+                    </p>
+                </div>
+
+                <div class="events-sub-btn">
+                    <button>Learn More</button>
+                </div>
+            </div>
+
+               <!-----events card 02-->
+            <div class="card">
+                <div class="img">
+                    <img src="images/110_E.jpg" alt="">
+                </div>
+
+                <div class="date">
+                    <div class="date-d">
+                        <p>03</p> | <p>Sept</p> | <p>2024</p>
+                    </div>
+                </div>
+
+                <div class="cont">
+                    <h4>Procession</h4>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, sit!
+                    </p>
+                </div>
+
+                <div class="events-sub-btn">
+                    <button>Learn More</button>
+                </div>
+            </div>
+
+            <!-----events card 03-->
+            <div class="card">
+                <div class="img">
+                    <img src="images/110_E.jpg" alt="">
+                </div>
+
+                <div class="date">
+                    <div class="date-d">
+                        <p>03</p> | <p>Sept</p> | <p>2024</p>
+                    </div>
+                </div>
+
+                <div class="cont">
+                    <h4>Procession</h4>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, sit!
+                    </p>
+                </div>
+
+                <div class="events-sub-btn">
+                    <button>Learn More</button>
+                </div>
+            </div>
+        </div>
+     </div>
+
+
+        <div>
+            <h2>Recent Events</h2>
+            <div class="recent-cards">
+              <!--------recent card 01------>
+                <div class="card">
+                    <h4>Youth choir Session</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </p>
+
+                    <div class="recent-card-btn">
+                        <button>View</button>
+                    </div>
+                </div>
+
+                
+              <!--------recent card 02------>
+                <div class="card">
+                    <h4>Youth choir Session</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </p>
+
+                    <div class="recent-card-btn">
+                        <button>View</button>
+                    </div>
+                </div>
+
+                
+              <!--------recent card 03------>
+                <div class="card">
+                    <h4>Youth choir Session</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </p>
+
+                    <div class="recent-card-btn">
+                        <button>View</button>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+   <!-- Ongoing Events Section -->
+<div class="ongoing-events">
+    <!-- Div for Live Updates -->
+    <div class="live-updates">
+        <h3>Live Updates</h3>
+        <div class="update-feed">
+            <p>Event X: Keynote speech is ongoing!</p>
+            <p>Event Y: Panel discussion started.</p>
+        </div>
+    </div>
+
+    <!-- Div for Countdown Timer -->
+    <div class="countdown-timer">
+        <h3>Next Ongoing Event Ends In</h3>
+        <div class="timer" id="event-timer">
+            <p>02:15:30</p>
+        </div>
+        <button>Join Now</button>
+    </div>
+</div>
+
+<!-- Live Event Page -->
+<div id="live-event-page" style="display:none;">
+    <h2>Live Event: Procession</h2>
+    <div class="live-stream">
+        <iframe src="https://example.com/live-stream-url" width="600" height="400"></iframe>
+    </div>
+
+    <!-- Include Poll and Q&A Features Here -->
+    <div class="interactive-features">
+        <div class="live-poll"> <!-- Poll Section --> </div>
+        <div class="qa-section"> <!-- Q&A Section --> </div>
+    </div>
+</div>
+
+  
+</section>
+
+<!-------------blog----------------->
+<section class="blog">
+    <h2>Latest News & Articles</h2>
+    <div class="blog-container">
+
+        <div class="big-of-the-day">
+            <div>
+                <img src="images/141_E.jpg" alt="">
+                <h3>The Journey of Celestial Chorale</h3>
+                <p>Read about our recent performances and the milestones we've achieved.</p>
+                <a href="blog1.html">Read More</a>
+            </div>
+        </div>
+
+
+      <div class="articles">
+        <article>
+            <h3>The Journey of Celestial Chorale</h3>
+            <p>Read about our recent performances and the milestones we've achieved.</p>
+            <a href="blog1.html">Read More</a>
+        </article>
+        <article>
+            <h3>The Journey of Celestial Chorale</h3>
+            <p>Read about our recent performances and the milestones we've achieved.</p>
+            <a href="blog1.html">Read More</a>
+        </article>
+        <article>
+            <h3>The Journey of Celestial Chorale</h3>
+            <p>Read about our recent performances and the milestones we've achieved.</p>
+            <a href="blog1.html">Read More</a>
+        </article>
+      </div>
+
+</div>
+</section>
+
+
+<!-----------Testmonials------------>
+<section class="testimonials">
+    <h2>What Our Audience Says</h2>
+
+    <div style="display: flex; gap: 10px;">
+      <div class="testimonial">
+        <p>"The Celestial Chorale's performance was a soul-stirring experience. Highly recommend!"</p>
+        <h4>- John Doe, Event Attendee</h4>
+     </div>
+      <div class="testimonial">
+        <p>"An absolutely fantastic group of talented individuals!"</p>
+        <h4>- Jane Smith, Choir Member</h4>
+     </div>
+  </div>
+</section>
+
+
+<!-- Donation Section -->
+<section class="don-action">
+    <div class="donate">
+        <h2>Support Our Choir</h2>
+        <p>Your donations help us continue to bring beautiful music to life. Consider supporting us today!</p>
+        <form action="https://www.paypal.com/donate" method="post" target="_top">
+            <input type="" name="business" value="your-paypal-email@example.com"  hidden>
+            <input type="" name="currency_code" value="USD"  hidden>
+            <button type="submit" class="donate-button">Donate Now</button>
+        </form>
+    </div>
+</section>
+
+<!--------------FAQs Section with Icons----------------->
+<section class="faq-section">
+    <h2>Frequently Asked Questions <i class="fas fa-question-circle"></i></h2>
+    <div class="faq">
+        <h3 class="faq-question">What is the Chorale Ministries? <i class="fas fa-chevron-down"></i></h3>
+        <div class="faq-answer hidden">
+            <p><i class="fas fa-info-circle"></i> Chorale Ministries is a gospel choir aimed at spreading God's word through harmonious melodies.</p>
+        </div>
+    </div>
+    <div class="faq">
+        <h3 class="faq-question">How can I support? <i class="fas fa-chevron-down"></i></h3>
+        <div class="faq-answer hidden">
+            <p><i class="fas fa-donate"></i> You can support us by buying concert tickets, donating, or attending our events.</p>
+        </div>
+    </div>
+    <div class="faq">
+        <h3 class="faq-question">Where are events held? <i class="fas fa-chevron-down"></i></h3>
+        <div class="faq-answer hidden">
+            <p><i class="fas fa-map-marker-alt"></i> Our events are held in various venues across the city. Check our Events page for more details.</p>
+        </div>
+    </div>
+</section>
+    <!-- Add the Dark Mode Toggle Button -->
+    <div class="dark-mode-toggle">
+        <button id="dark-mode-btn">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+
+
+<footer>
+    <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-section about">
+            <h4>Celestial Chorale</h4>
+            <p>
+                The Celestial Celestial Chorale brings you soul-stirring music with a passion for excellence in every note. Join us as we celebrate the gift of music and the joy it brings to our hearts and souls.
+            </p>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="footer-section links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Events.html">Events</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="footer-section projects">
+            <h4>Projects</h4>
+            <ul>
+                <li><a href="#">Annual Concert</a></li>
+                <li><a href="#">Community Outreach</a></li>
+                <li><a href="#">Youth Choir Program</a></li>
+                <li><a href="#">Music Therapy Sessions</a></li>
+                <li><a href="#">Christmas Carols</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media & Newsletter Subscription -->
+        <div class="footer-section social">
+            <h4>Connect with Us</h4>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+            <h4>Newsletter</h4>
+            <form action="#" class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Copyright Section -->
+    <div class="footer-bottom">
+        <p>Celestial Chorale &copy; 2024 All rights reserved | Developed with ❤️ by ENC@CODELIFE</p>
+    </div>
+</footer>
+
+</main>
+
+    <script src="fetchevent.js"></script>
+    <script src="anim.js"></script>
+    <script src="arr.js"></script>
+    <script src="script.js"></script>
+    <script src="newsletter.js"></script>
+<script src="fontawesome-free-6.4.2-web/js/all.js"></script>
+</body>
+</html>

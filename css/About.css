@@ -1,0 +1,254 @@
+:root{
+    --orange: rgb(255, 156, 74);
+    --green: rgb(107, 214, 65);
+    --light-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    --background-color: #fff;
+    --dark-shadow: 0px 4px 6px rgba(0,0,0,0.6);
+    --text-color: #1a0808;
+    --light-color-dark: #181616;
+    --grey-text: #585858;
+    --light-grey-text: rgb(189, 189, 189);
+}
+
+
+.About-hero{
+    width: 100%;
+    height: 60dvh;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    color: aliceblue;
+}
+
+.About-hero::after{
+    content: '';
+    inset: 0;
+    width: 100%;
+    position: absolute;
+    background: rgba(0,0,0,0.4);
+}
+
+.About-hero-cont{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+.About-hero-cont a{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    color: var(--text-color);
+    border-radius: 20px;
+    border: 1px solid aliceblue;
+    padding: 0.3rem;
+    color: aliceblue;
+}
+
+.About-us-page-shortcuts{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 6rem;
+    position: relative;
+    z-index: 1;
+}
+
+.About-us-page-shortcuts .shortcuts{
+    display: flex;
+    gap: 20px;
+}
+
+.shortcuts a{
+    border: 1px solid aliceblue;
+    padding: 0.2rem;
+    border-radius: 50px;
+    color: aliceblue;
+}
+
+.shortcuts .fa-users{
+    color: aliceblue;
+}
+
+/* ///////////Programs/////// */
+/* #Programs{
+    background: #181616;
+} */
+
+.programs-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 5px;
+}
+
+.program{
+    width: 100%;
+    box-shadow: var(--light-shadow);
+    padding: 0.8rem;
+    border-radius: 0.8rem;
+    background: aliceblue;
+}
+
+/* ////////Leaders/////// */
+#Leaders{
+    background: #181616;
+    color: aliceblue;
+}
+#Leaders p{
+    font-size: 0.9em;
+    padding-bottom: 0.8rem;
+    color: var(--light-grey-text);
+}
+
+.leaders{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+}
+.leader{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 250px;
+    padding: 0.8rem;
+    border: 1px solid #b4b2b2;
+    box-shadow: 0px 0px 1px;
+}
+
+.leader-head{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.leader-head p{
+    font-size: 0.8em;
+    color: var(--light-grey-text);
+}
+
+.leader-pic{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.leader-pic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.leader-bio p{
+    color: var(--light-grey-text);
+    font-size: 0.9em;
+}
+
+.leader-more button{
+   padding: 0.5rem;
+   width: 100px;
+   border-radius: 5px;
+   color: var(--text-color);
+   font-size: 0.9em;
+   margin-top: 5px;
+   cursor: pointer;
+   background: transparent;
+   color: var(--light-grey-text);
+}
+
+.leader-more button:hover{
+    background: #181616;
+    color: #fff;
+}
+
+/* //////singers///// */
+
+.singers{
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(4,1fr);
+}
+
+#Singers-Container h3{
+    padding-bottom: 0.8rem;
+}
+
+.singer{
+    height: 280px;
+    background-position: center;
+    background-size: cover;
+    box-shadow: var(--dark-shadow);
+}
+
+
+.singer-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: inherit;
+    color: aliceblue;
+    padding: 0.8rem;
+    box-shadow: 40px -40px 180px black inset;
+}
+
+@media screen and (max-width: 764px) {
+    .leaders{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .leader{
+        height: fit-content;
+    }
+
+    .programs-container{
+        flex-direction: column;
+    }
+
+    .singers{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .singer{
+        width: 342px;
+    }
+}
+
+@media screen and (max-width: 730px){
+    .leaders{
+        display: grid;
+        grid-template-columns: repeat(2,220px);
+    }
+    .singers{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .singer{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .leaders{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .singers{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .singer{
+        width: 100%;
+    }
+}

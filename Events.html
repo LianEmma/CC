@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celestial Chorale.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/anim.css">
+    <link rel="stylesheet" href="css/arr.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+</head>
+<body>
+<main>
+
+
+    <header>
+            <nav>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/chorale2.jpg" alt="">
+                    </a>
+                </div>
+                
+                <div class="links">
+                    <a href="index.html">Home</a>
+                    <a href="About.html">About</a>
+                    <a href="Events.html">Events</a>
+                    <a href="Gallery.html">Gallery</a>
+                    <a href="Contact.html">Contact</a>
+                </div>
+
+                <div class="account">
+                    <div class="acc">
+                       <img src="man-placeholder.png" alt="photo">
+                        <button>
+                            <i class="fas fa-chevron-down"></i>
+                            <i class="fas fa-chevron-up hidden"></i>
+                        </button>
+                    </div>
+
+                    <div class="signs">
+                        <p class="sign-in">sign in</p>
+                        <p class="sign-up">sign up</p>
+                    </div>
+                </div>
+
+                <!-----------------drop down-------------------->
+                <div class="drop-down">
+
+                    <div class="accountD">
+                        <div class="acc">
+                           <img src="man-placeholder.png" alt="photo">
+                            <button>
+                                <i class="fas fa-chevron-down"></i>
+                                <i class="fas fa-chevron-up hidden"></i>
+                            </button>
+                        </div>
+    
+                        <div class="signsD">
+                            <p class="sign-in">sign in</p>
+                            <p class="sign-up">sign up</p>
+                        </div>
+                    </div>
+
+
+                    <div class="linksD">
+                        <a href="#">Home</a>
+                        <a href="About.html">About</a>
+                        <a href="Events.html">Events</a>
+                        <a href="Gallery.html">Gallery</a>
+                        <a href="Contact.html">Contact</a>
+                    </div>
+                </div>
+                <!------------bars------------->
+                <div class="bars">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </nav>
+
+    </header>
+        
+        <div id="calendar-container">
+            <div id="calendar-header">
+                <button id="prev-month">❮</button>
+                <h2 id="month-year"></h2>
+                <button id="next-month">❯</button>
+            </div>
+            <div id="calendar-grid">
+                <div class="day-label">Sun</div>
+                <div class="day-label">Mon</div>
+                <div class="day-label">Tue</div>
+                <div class="day-label">Wed</div>
+                <div class="day-label">Thu</div>
+                <div class="day-label">Fri</div>
+                <div class="day-label">Sat</div>
+            </div>
+        </div>
+        <div id="event-section">
+            <h3>Events for <span id="selected-date">...</span></h3>
+            <ul id="event-list"></ul>
+            <button id="add-event-button">Add Event</button>
+        </div>
+    </main>
+
+    <div id="event-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Add Event</h3>
+            <form id="event-form">
+                <label for="event-name">Event Name:</label>
+                <input type="text" id="event-name" required>
+
+                <label for="event-description">Description:</label>
+                <textarea id="event-description" required></textarea>
+
+                <button type="submit">Save Event</button>
+            </form>
+        </div>
+    </div>
+
+ <!-- Event Calendar Section -->
+<section>
+    <div class="events-sub">
+        <div>
+            <h2>Upcoming Events</h2>
+            <!-- Events Card 01 with "Join Live" Button -->
+            <div class="upcoming-cards">
+                <div class="card">
+                    <div class="img">
+                        <img src="images/28.jpg" alt="Event Image">
+                    </div>
+
+                    <div class="date">
+                        <div class="date-d">
+                            <p>03</p> | <p>Sept</p> | <p>2024</p>
+                        </div>
+                    </div>
+
+                    <div class="cont">
+                        <h4>Procession</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, sit!</p>
+                    </div>
+
+                    <div class="events-sub-btn">
+                        <button id="join-live-btn-1" onclick="goToLiveEvent('https://example.com/live-event-1')">Join Live</button>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+
+                <!-- More event cards as needed... -->
+            </div>
+        </div>
+
+        <div>
+            <h2>Ongoing Events</h2>
+            <div class="ongoing-events">
+                <!-- Live Poll Section -->
+                <div class="live-poll">
+                    <h3>Live Poll</h3>
+                    <p>What aspect of this event do you find most interesting?</p>
+                    <form id="poll-form">
+                        <label>
+                            <input type="radio" name="poll-option" value="Speakers" /> Speakers
+                        </label><br />
+                        <label>
+                            <input type="radio" name="poll-option" value="Topics" /> Topics
+                        </label><br />
+                        <label>
+                            <input type="radio" name="poll-option" value="Networking" /> Networking Opportunities
+                        </label><br />
+                        <button type="button" onclick="submitPoll()">Vote</button>
+                    </form>
+                    <div id="poll-results" style="display:none;">
+                        <h4>Poll Results:</h4>
+                        <ul id="poll-results-list"></ul>
+                    </div>
+                </div>
+
+                <!-- Live Q&A Section -->
+                <div class="qa-section">
+                    <h3>Live Q&A</h3>
+                    <form id="qa-form">
+                        <input type="text" id="question-input" placeholder="Ask a question..." required />
+                        <button type="button" onclick="submitQuestion()">Submit</button>
+                    </form>
+                    <div class="qa-display" id="qa-display">
+                        <h4>Questions from Attendees:</h4>
+                        <ul id="questions-list"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    </main>
+
+
+    <footer>
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-section about">
+                <h4>Celestial Chorale</h4>
+                <p>
+                    The Celestial Celestial Chorale brings you soul-stirring music with a passion for excellence in every note. Join us as we celebrate the gift of music and the joy it brings to our hearts and souls.
+                </p>
+            </div>
+    
+            <!-- Quick Links Section -->
+            <div class="footer-section links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <a href="index.html">Home</a>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Events.html">Events</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+    
+            <!-- Projects Section -->
+            <div class="footer-section projects">
+                <h4>Projects</h4>
+                <ul>
+                    <li><a href="#">Annual Concert</a></li>
+                    <li><a href="#">Community Outreach</a></li>
+                    <li><a href="#">Youth Choir Program</a></li>
+                    <li><a href="#">Music Therapy Sessions</a></li>
+                    <li><a href="#">Christmas Carols</a></li>
+                </ul>
+            </div>
+    
+            <!-- Social Media & Newsletter Subscription -->
+            <div class="footer-section social">
+                <h4>Connect with Us</h4>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+                <h4>Newsletter</h4>
+                <form action="#" class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    
+        <!-- Copyright Section -->
+        <div class="footer-bottom">
+            <p>Celestial Chorale &copy; 2024 All rights reserved | Developed with ❤️ by ENC@CODELIFE</p>
+        </div>
+    </footer>
+    
+    </main>
+    
+        <script src="fetchevent.js"></script>
+        <script src="anim.js"></script>
+        <script src="arr.js"></script>
+        <script src="script.js"></script>
+        <script src="newsletter.js"></script>
+    <script src="fontawesome-free-6.4.2-web/js/all.js"></script>
+    </body>
+    </html>

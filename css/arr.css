@@ -1,0 +1,178 @@
+
+.arr {
+    display: flex;
+    gap: 20px;
+    padding-inline: 2rem;
+}
+
+/* mem-slider ensures the active slide takes up 100% width and 100dvh */
+.mem-slider {
+    width: 100%;
+    max-height: 500px;
+    position: relative;
+    background: linear-gradient(135deg, #f3f2f2, #e0e0e0);
+    box-shadow: inset 0px 6px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Active slide inside mem-slider should take up full width and height */
+.mem-slider .slide {
+    animation: zoomIn 0.8s ease-out;
+    width: 100%; /* 100% width */
+    height: 100dvh; /* 100% of the viewport height */
+    border-radius: 0; /* No border radius for full screen look */
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+/* Disable the hover scale effect for the active slide in mem-slider */
+.mem-slider .slide:hover {
+    transform: none; /* No scaling or translation */
+}
+
+/* Zoom-in effect for the slide entering the mem-slider */
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Grid layout for unique arrangement of slides */
+.slides {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 150px); /* Smaller fixed row height */
+    gap: 20px;
+    padding: 1rem;
+    max-width: 400px; /* Ensure a smaller max width */
+    max-height: 500px;
+    background: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevent overflow from large content */
+}
+
+/* Responsive grid layout */
+@media (max-width: 768px) {
+    .slides {
+       width: 300px;
+       display: flex;
+       gap: 5px;
+    }
+
+    .slides .slide{
+        width: 250px;
+        height: 90px;
+    }
+
+    .slides .slide .content p{
+        display: none;
+    }
+
+    .slides .slide .content h2{
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .arr{
+        width: 100%;
+        flex-direction: column;
+        background: #1a1818;
+    }
+
+    .arr .mem-slider{
+        width: 100%;
+        padding: 0%;
+        margin: 0%;
+        background: #0056b3;
+    }
+
+    .slides {
+       width: 100%;
+       display: flex;
+       gap: 5px;
+    }
+
+    .slides .slide{
+        width: 100%;
+        height: 90px;
+    }
+
+    .slides .slide .content p{
+        display: none;
+    }
+
+    .slides .slide .content h2{
+        font-size: medium;
+    }
+    
+}
+
+/* Each slide styled to fit within the grid cells */
+.slide {
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: aliceblue;
+    display: flex;
+    padding: 1rem; /* Reduce padding to maintain smaller size */
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+    overflow: hidden; /* Prevent content overflow within the slides */
+}
+
+/* Ensure content width doesn't affect the parent container */
+.content {
+    position: relative;
+    max-width: 100%; /* Ensure content stays within the slide */
+    text-align: center;
+}
+
+.slide::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #0e0d0dbd, #55555528);
+}
+
+/* Hover effect on grid slides */
+.slides .slide:hover {
+    background: linear-gradient(135deg, #444, #666);
+    transform: scale(1.05) translateY(-10px); /* Scale and move effect for grid slides only */
+}
+
+/* Full-width when the slide moves back to the grid container */
+.slide.full-width {
+    width: 100%;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Fade-in effect for the returned slide */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Ensure mem-slider displays only the active slide */
+.mem-slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+}

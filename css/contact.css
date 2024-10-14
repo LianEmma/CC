@@ -1,0 +1,320 @@
+
+:root{
+    --shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    --shadow-egde-fine: 0px 0px 4px rgba(0,0,0,0.1);
+    --shadow-btn: 0px 2px 6px rgba(0,0,0,0.6);
+}
+
+*{
+    transition: all 0.5s ease;
+}
+
+.contact-page{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+
+/*////////////////hero styles////// */
+.contact-hero{
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(45deg,rgb(231, 53, 82),blueviolet);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    animation: move 60s ease-in-out infinite;
+}
+
+.contact-hero::before{
+    content: '';
+    inset: 0;
+    position: absolute;
+    background: rgba(0,0,0,0.1);
+}
+
+@keyframes move {
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 50% 50%;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+
+.contact-hero .cont{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 2;
+    color: aliceblue;
+}
+
+.contact-hero .cont p{
+    width: 50%;
+}
+
+.contact-page-hero-icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    position: relative;
+}
+
+.contact-page-hero-icons .icons{
+    display: flex;
+    gap: 2px;
+}
+
+.contact-page-hero-icons .icons a{
+    border: 1px solid aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem;
+}
+
+.contact-page-hero-icons .icons .fa-youtube,.fa-twitter,.fa-whatsapp,.fa-linkedin{
+    font-size: 25px;
+    color: aliceblue;
+}
+
+/*////////////////form styles////// */
+
+.form{
+    flex: 2;
+    background: white;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.form .h2{
+    padding-bottom: 1rem;
+    padding-inline: 1rem;
+}
+
+.form form{
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.head-inputs{
+    display: flex;
+    gap: 20px;
+}
+
+.form form input{
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    box-shadow: inset var(--shadow-egde-fine);
+    background: #f8f8f8;
+}
+
+.form form textarea{
+    width: 100%;
+    padding: 1rem;
+    font-size: 0.9rem;
+    min-height: 20dvh;
+    box-shadow: inset var(--shadow-egde-fine);
+    background: #f8f8f8;
+}
+
+.other-lines{
+    flex: 0.8;
+    background: white;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.lines-h2{
+    padding-bottom: 1rem;
+}
+
+.line{
+    margin-bottom: 20px;
+    border-bottom: 1px solid #dbdbdb;
+    padding-bottom: 0.8rem;
+}
+
+
+.line .top-icon-contact{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 0.8rem;
+}
+
+.line .top-icon-contact .fa-whatsapp, .top-icon-contact .fa-twitter{
+    color: #ffffff;
+    background: orangered;
+    font-size: 1.3em;
+    border-radius: 50%;
+    padding: 0.3rem;
+}
+
+.line .top-icon-contact .fa-phone{
+    color: #ffffff;
+    background: orangered;
+    font-size: 1em;
+    border-radius: 50%;
+    padding: 0.3rem;
+}
+
+.line p{
+    font-size: 0.9em;
+}
+
+.send{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #f3f2f2;
+}
+
+.send #submit{
+    width: 150px;
+    padding: 0.8rem;
+    background: #f3f2f2;
+    box-shadow: none;
+}
+
+ #envsend{
+    padding: 1rem;
+    font-size: 24px;
+}
+
+
+.map{
+    width: 100%;
+    min-height: 50dvh;
+    background: rgb(204, 204, 204);
+}
+
+/* //////////in-the-news-cont-container///////////// */
+.in-the-news{
+    background: white;
+}
+.in-the-news h3{
+    padding-bottom: 0.8rem;
+}
+.in-the-news-cont-container{
+    display: flex;
+
+    gap: 20px;
+}
+
+.in-the-news-img{
+    width: 60%;
+    height: 20;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.in-the-news-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.in-the-news-cont button{
+    width: 200px;
+    padding: 0.5rem;
+    border-radius: 20px;
+    background: orangered;
+    color: white;
+    margin-top: 10px;
+    box-shadow: var(--shadow);
+}
+
+
+.in-the-news-cont button:hover{
+    cursor: pointer;
+    background: orange;
+    box-shadow: var(--shadow-btn);
+}
+
+
+@media screen and (max-width: 480px) {
+    .contact-page{
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    .other-lines{
+        width: 100%;
+    }
+
+    .in-the-news-cont-container{
+        flex-direction: column;
+    }
+    .in-the-news{
+        padding: 0.8rem;
+    }
+
+    .in-the-news-img{
+        width: 100%;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    
+    .in-the-news-img img{
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 768px){
+    .contact-page{
+        display: flex;
+        flex-direction: column;
+        padding: 0.8rem;
+    }
+
+    .in-the-news-cont-container{
+        flex-direction: column;
+    }
+    .in-the-news{
+        padding: 0.8rem;
+    }
+
+    .in-the-news-img{
+        width: 100%;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    
+    .in-the-news-img img{
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+
+    .contact-hero .cont p{
+        text-align: center;
+    }
+
+    .contact-page-hero-icons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem;
+        position: relative;
+    }
+}

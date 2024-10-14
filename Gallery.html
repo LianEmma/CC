@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celestial Chorale.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/anim.css">
+    <link rel="stylesheet" href="css/arr.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+</head>
+<body>
+<main>
+
+
+    <header>
+            <nav>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/chorale2.jpg" alt="">
+                    </a>
+                </div>
+                
+                <div class="links">
+                    <a href="index.html">Home</a>
+                    <a href="About.html">About</a>
+                    <a href="Events.html">Events</a>
+                    <a href="Gallery.html">Gallery</a>
+                    <a href="Contact.html">Contact</a>
+                </div>
+
+                <div class="account">
+                    <div class="acc">
+                       <img src="man-placeholder.png" alt="photo">
+                        <button>
+                            <i class="fas fa-chevron-down"></i>
+                            <i class="fas fa-chevron-up hidden"></i>
+                        </button>
+                    </div>
+
+                    <div class="signs">
+                        <p class="sign-in">sign in</p>
+                        <p class="sign-up">sign up</p>
+                    </div>
+                </div>
+
+                <!-----------------drop down-------------------->
+                <div class="drop-down">
+
+                    <div class="accountD">
+                        <div class="acc">
+                           <img src="man-placeholder.png" alt="photo">
+                            <button>
+                                <i class="fas fa-chevron-down"></i>
+                                <i class="fas fa-chevron-up hidden"></i>
+                            </button>
+                        </div>
+    
+                        <div class="signsD">
+                            <p class="sign-in">sign in</p>
+                            <p class="sign-up">sign up</p>
+                        </div>
+                    </div>
+
+
+                    <div class="linksD">
+                        <a href="index.html">Home</a>
+                        <a href="About.html">About</a>
+                        <a href="Events.html">Events</a>
+                        <a href="Gallery.html">Gallery</a>
+                        <a href="Contact.html">Contact</a>
+                    </div>
+                </div>
+                <!------------bars------------->
+                <div class="bars">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </nav>
+
+    </header>
+
+     <!-- Hero Section -->
+     <section class="heroG" style="background-image: url(images/141_E.jpg);">
+        <div class="hero-content">
+            <h1>Welcome to the Gallery</h1>
+            <p>Explore our collection of memorable moments.</p>
+            <button class="btn" onclick="scrollToGallery()">Explore Gallery</button>
+        </div>
+    </section>
+
+
+    <section class="gallery-container">
+        <div class="tabs">
+            <div class="tab" id="TabAll" style="background-image: url(images/cholare.jpg);"><h4>All</h4></div>
+            <div class="tab" id="Tab1" style="background-image: url(images/cholare.jpg);"><h4>Annual Concert</h4></div>
+            <div class="tab" id="Tab2" style="background-image: url(images/cholare.jpg);"><h4>Community Outreach</h4></div>
+            <div class="tab" id="Tab3" style="background-image: url(images/cholare.jpg);"><h4>Youth Choir</h4></div>
+            <div class="tab" id="Tab4" style="background-image: url(images/cholare.jpg);"><h4>Music Therapy Sessions</h4></div>
+            <div class="tab" id="Tab5" style="background-image: url(images/cholare.jpg);"><h4>Christmas Carols</h4></div>
+        </div>
+
+        <div class="gallery-image-container"></div>
+    </section>
+    
+<!-- Lightbox Modal -->
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <span class="lightbox-prev" id="lightboxPrev">&#10094;</span>
+    <span class="lightbox-next" id="lightboxNext">&#10095;</span>
+    <div class="lightbox-content">
+        <img id="lightboxImage" src="" alt="">
+        <p id="lightboxDescription" class="lightbox-description"></p> <!-- Lightbox description below the image -->
+    </div>
+</div>
+
+
+    
+
+    <footer>
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-section about">
+                <h4>Celestial Chorale</h4>
+                <p>
+                    The Celestial Celestial Chorale brings you soul-stirring music with a passion for excellence in every note. Join us as we celebrate the gift of music and the joy it brings to our hearts and souls.
+                </p>
+            </div>
+    
+            <!-- Quick Links Section -->
+            <div class="footer-section links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <a href="index.html">Home</a>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Events.html">Events</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+    
+            <!-- Projects Section -->
+            <div class="footer-section projects">
+                <h4>Projects</h4>
+                <ul>
+                    <li><a href="#">Annual Concert</a></li>
+                    <li><a href="#">Community Outreach</a></li>
+                    <li><a href="#">Youth Choir Program</a></li>
+                    <li><a href="#">Music Therapy Sessions</a></li>
+                    <li><a href="#">Christmas Carols</a></li>
+                </ul>
+            </div>
+    
+            <!-- Social Media & Newsletter Subscription -->
+            <div class="footer-section social">
+                <h4>Connect with Us</h4>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+                <h4>Newsletter</h4>
+                <form action="#" class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    
+        <!-- Copyright Section -->
+        <div class="footer-bottom">
+            <p>Celestial Chorale &copy; 2024 All rights reserved | Developed with ❤️ by ENC@CODELIFE</p>
+        </div>
+    </footer>
+    
+    </main>
+    
+        <script src="fetchevent.js"></script>
+        <script src="js/gallery.js"></script>
+        <script src="anim.js"></script>
+        <script src="arr.js"></script>
+        <script src="script.js"></script>
+        <script src="newsletter.js"></script>
+    <script src="fontawesome-free-6.4.2-web/js/all.js"></script>
+    </body>
+    </html>

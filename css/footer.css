@@ -1,0 +1,132 @@
+/* ////// Footer Styles ////// */
+
+/* Footer Container Styles */
+footer {
+    background-color: #0c0813; /* Dark background */
+    color: #f1f1f1; /* Softer text color */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    padding-top: 6rem; /* Maintain padding */
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 4rem; /* Maintain side padding */
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px; /* Maintain minimum width */
+    margin: 20px; /* Maintain margin */
+}
+
+.footer-section h4 {
+    font-size: 1.4rem; /* Increased header font size */
+    margin-bottom: 20px; /* Adjusted margin */
+    border-bottom: 3px solid #ffd700; /* Brighter, thicker border */
+    padding-bottom: 10px; /* Increased padding */
+}
+
+.footer-section p, 
+.footer-section ul, 
+.footer-section form {
+    font-size: 1em; /* Slightly larger body text */
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px; /* Maintain spacing */
+}
+
+.footer-section ul li a {
+    color: #f1f1f1;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s; /* Adding transform for hover */
+}
+
+.footer-section ul li a:hover {
+    color: #ffd700;
+}
+
+/* Social Icons Styles */
+.social-icons {
+    margin-top: 15px; /* Maintain spacing */
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 15px; /* Maintain spacing */
+    color: #f1f1f1;
+    font-size: 1.2rem; /* Increased icon size */
+    transition: color 0.3s, transform 0.3s; /* Adding transform for hover */
+}
+
+.social-icons a:hover {
+    color: #ffd700;
+}
+
+/* Newsletter Form Styles */
+.newsletter-form {
+    display: flex;
+    margin-top: 10px; /* Maintain margin */
+}
+
+.newsletter-form input {
+    padding: 10px; /* Maintain padding */
+    width: 70%;
+    border: 1px solid #ccc; /* Added border for input */
+    border-radius: 5px 0 0 5px;
+}
+
+.newsletter-form button {
+    padding: 10px 15px; /* Maintain padding */
+    background-color: #ffd700;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+/* Footer Bottom Styles */
+.footer-bottom {
+    text-align: center;
+    padding: 1rem 0; /* Maintain padding */
+    background-color: #13061f; /* Darker background for footer bottom */
+    color: #ccc;
+    font-size: 16px; /* Increased font size */
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    footer{
+        padding: 0.2rem;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 0.2rem;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .newsletter-form button {
+        width: 100%;
+    }
+}

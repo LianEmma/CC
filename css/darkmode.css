@@ -1,0 +1,64 @@
+body.dark-mode {
+    --background-color: #333;
+    --text-color: #fff;
+}
+
+/* Dark Mode Button Styling */
+.dark-mode-toggle {
+    background: #333;
+    position: sticky;
+}
+
+#dark-mode-btn {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(0.9);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#dark-mode-btn:hover {
+    transform: scale(1);
+    background-color: #ddd;
+}
+
+.dark-mode #dark-mode-btn {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode #dark-mode-btn:hover {
+    background-color: #555;
+}
+
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header, body.dark-mode footer {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode nav a {
+    color: #e0e0e0;
+}
+
+body.dark-mode section {
+    background-color: #222;
+    color: #fff;
+}
+

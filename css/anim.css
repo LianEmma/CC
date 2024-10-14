@@ -1,0 +1,81 @@
+/* Base styles for animations */
+.animated {
+    opacity: 0;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  }
+  
+  /* Fade-in animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .fade-in.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Slide-up animation */
+  .slide-up {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  
+  .slide-up.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Zoom-in animation */
+  .zoom-in {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  
+  .zoom-in.animate {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  /* Rotate-in animation */
+  .rotate-in {
+    opacity: 0;
+    transform: rotate(-45deg);
+  }
+  
+  .rotate-in.animate {
+    opacity: 1;
+    transform: rotate(0);
+  }
+  
+  /* Slide-left animation */
+  .slide-left {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  
+  .slide-left.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* Slide-right animation */
+  .slide-right {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  
+  .slide-right.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* Transition speed modifiers */
+  .slow {
+    transition-duration: 1.5s;
+  }
+  
+  .fast {
+    transition-duration: 0.5s;
+  }
+  
