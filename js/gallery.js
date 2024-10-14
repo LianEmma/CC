@@ -140,3 +140,4 @@ window.onload = () => {
     displayImages("all");
     setActiveTab(TabAll);
 };
+
