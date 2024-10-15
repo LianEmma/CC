@@ -6,8 +6,8 @@ function scrollToGallery() {
 // Gallery array with descriptions
 const gallery = [
     { cat: "Annual concert", src: "images/28.jpg", description: "Celestial Chorale at the Annual Concert, performing in full harmony." },
-    { cat: "Annual concert", src: "images/110.jpg", description: "Orchestra performing during our Annual Concert, an unforgettable night." },
-    { cat: "Annual concert", src: "images/141.jpg", description: "The Celestial Chorale choir members in action." },
+    { cat: "Annual concert", src: "images/IMG_3636.jpg", description: "Orchestra performing during our Annual Concert, an unforgettable night." },
+    { cat: "Annual concert", src: "images/Image-2024-02-20.jpeg", description: "The Celestial Chorale choir members in action." },
     { cat: "Annual concert", src: "images/chorale.jpg", description: "A powerful performance led by our talented conductor." },
     { cat: "community", src: "images/chorale1.jpg", description: "Bringing the community together with soulful music." },
     { cat: "Annual concert", src: "images/chorale2.jpg", description: "Harmony in every note during the concert finale." },
@@ -31,15 +31,28 @@ let filteredGallery = [];
 const TabAll = document.querySelector("#TabAll");
 const Tab1 = document.querySelector("#Tab1");
 const Tab2 = document.querySelector("#Tab2");
-const Tab3 = document.querySelector("#Tab3");
-const Tab4 = document.querySelector("#Tab4");
-const Tab5 = document.querySelector("#Tab5");
 
-// Display filtered images with descriptions
+// Display filtered images or a message if no images are available
 function displayImages(category) {
     GIC.innerHTML = ""; // Clear the container
+    GIC.classList.remove('no-images'); // Remove the no-images class in case it's set
+
     filteredGallery = (category === "all") ? gallery : gallery.filter(item => item.cat.toLowerCase() === category.toLowerCase());
 
+    // Check if there are any images to display
+    if (filteredGallery.length === 0) {
+        GIC.classList.add('no-images'); // Add the no-images class to center the message
+        const noImagesMessage = document.createElement("div");
+        noImagesMessage.classList.add("no-images-message");
+        noImagesMessage.innerHTML = `
+            <h3>No images available</h3>
+            <p>Currently, there are no images in the <strong>${category}</strong> category. Please check back later or explore other categories.</p>
+        `;
+        GIC.appendChild(noImagesMessage);
+        return;
+    }
+
+    // Display images if available
     filteredGallery.forEach((item, index) => {
         const imgContainer = document.createElement("div");
         imgContainer.classList.add("img-container");
@@ -47,17 +60,24 @@ function displayImages(category) {
         const imgElement = document.createElement("img");
         imgElement.src = item.src;
         imgElement.alt = item.description;
+
+        // Add a listener to apply the "loaded" class once the image is loaded
+        imgElement.onload = () => {
+            imgElement.classList.add('loaded');
+        };
+
         imgElement.addEventListener("click", () => openLightbox(index)); // Click event to open lightbox
 
-        const description = document.createElement("p");
-        description.classList.add("image-description");
-        description.innerText = item.description;
+        const descriptionOverlay = document.createElement("div");
+        descriptionOverlay.classList.add("img-description-overlay");
+        descriptionOverlay.innerText = item.description;
 
         imgContainer.appendChild(imgElement);
-        imgContainer.appendChild(description);
+        imgContainer.appendChild(descriptionOverlay);
         GIC.appendChild(imgContainer);
     });
 }
+
 
 // Set active tab styling
 function setActiveTab(activeTab) {
@@ -65,7 +85,7 @@ function setActiveTab(activeTab) {
     activeTab.classList.add('active-tab');
 }
 
-// Open the lightbox with description below the image
+// Open the lightbox
 function openLightbox(index) {
     currentImageIndex = index;
     lightboxImage.src = filteredGallery[currentImageIndex].src;
@@ -90,6 +110,7 @@ function prevImage() {
     openLightbox(currentImageIndex);
 }
 
+// Event listeners for tabs
 // Event listeners for tabs
 TabAll.addEventListener("click", () => { displayImages("all"); setActiveTab(TabAll); });
 Tab1.addEventListener("click", () => { displayImages("Annual concert"); setActiveTab(Tab1); });
@@ -117,27 +138,8 @@ document.addEventListener("keydown", (e) => {
     }
 });
 
-// Full-screen toggle button
-const fullscreenBtn = document.createElement('button');
-fullscreenBtn.classList.add('fullscreen-btn');
-fullscreenBtn.innerText = 'Fullscreen';
-document.body.appendChild(fullscreenBtn);
-
-fullscreenBtn.addEventListener('click', () => {
-    if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen();
-        fullscreenBtn.innerText = 'Exit Fullscreen';
-    } else {
-        if (document.exitFullscreen) {
-            document.exitFullscreen();
-            fullscreenBtn.innerText = 'Fullscreen';
-        }
-    }
-});
-
 // Initialize gallery with "All" tab active
 window.onload = () => {
     displayImages("all");
     setActiveTab(TabAll);
 };
-
