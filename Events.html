@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Celestial Chorale.</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/events.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/anim.css">
     <link rel="stylesheet" href="css/arr.css">
@@ -90,120 +91,15 @@
         </nav>
     </header>
     
-        
-        <div id="calendar-container">
-            <div id="calendar-header">
-                <button id="prev-month">❮</button>
-                <h2 id="month-year"></h2>
-                <button id="next-month">❯</button>
-            </div>
-            <div id="calendar-grid">
-                <div class="day-label">Sun</div>
-                <div class="day-label">Mon</div>
-                <div class="day-label">Tue</div>
-                <div class="day-label">Wed</div>
-                <div class="day-label">Thu</div>
-                <div class="day-label">Fri</div>
-                <div class="day-label">Sat</div>
+    <section class="hero-container-event" style="background-image: url(images/IMG_3636.JPG);">
+        <div class="Events-hero">
+            <div class="Events-hero-cont">
+                <h1>Page Coming Soon</h1>
+                <p>this Page is still Under Development but will be Updated ASAP, sorry for any Inconvinieces caused.</p>
+                <a href="index.html">Back To Home Page</a>
             </div>
         </div>
-        <div id="event-section">
-            <h3>Events for <span id="selected-date">...</span></h3>
-            <ul id="event-list"></ul>
-            <button id="add-event-button">Add Event</button>
-        </div>
-    </main>
-
-    <div id="event-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h3>Add Event</h3>
-            <form id="event-form">
-                <label for="event-name">Event Name:</label>
-                <input type="text" id="event-name" required>
-
-                <label for="event-description">Description:</label>
-                <textarea id="event-description" required></textarea>
-
-                <button type="submit">Save Event</button>
-            </form>
-        </div>
-    </div>
-
- <!-- Event Calendar Section -->
-<section>
-    <div class="events-sub">
-        <div>
-            <h2>Upcoming Events</h2>
-            <!-- Events Card 01 with "Join Live" Button -->
-            <div class="upcoming-cards">
-                <div class="card">
-                    <div class="img">
-                        <img src="images/28.jpg" alt="Event Image">
-                    </div>
-
-                    <div class="date">
-                        <div class="date-d">
-                            <p>03</p> | <p>Sept</p> | <p>2024</p>
-                        </div>
-                    </div>
-
-                    <div class="cont">
-                        <h4>Procession</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, sit!</p>
-                    </div>
-
-                    <div class="events-sub-btn">
-                        <button id="join-live-btn-1" onclick="goToLiveEvent('https://example.com/live-event-1')">Join Live</button>
-                        <button>Learn More</button>
-                    </div>
-                </div>
-
-                <!-- More event cards as needed... -->
-            </div>
-        </div>
-
-        <div>
-            <h2>Ongoing Events</h2>
-            <div class="ongoing-events">
-                <!-- Live Poll Section -->
-                <div class="live-poll">
-                    <h3>Live Poll</h3>
-                    <p>What aspect of this event do you find most interesting?</p>
-                    <form id="poll-form">
-                        <label>
-                            <input type="radio" name="poll-option" value="Speakers" /> Speakers
-                        </label><br />
-                        <label>
-                            <input type="radio" name="poll-option" value="Topics" /> Topics
-                        </label><br />
-                        <label>
-                            <input type="radio" name="poll-option" value="Networking" /> Networking Opportunities
-                        </label><br />
-                        <button type="button" onclick="submitPoll()">Vote</button>
-                    </form>
-                    <div id="poll-results" style="display:none;">
-                        <h4>Poll Results:</h4>
-                        <ul id="poll-results-list"></ul>
-                    </div>
-                </div>
-
-                <!-- Live Q&A Section -->
-                <div class="qa-section">
-                    <h3>Live Q&A</h3>
-                    <form id="qa-form">
-                        <input type="text" id="question-input" placeholder="Ask a question..." required />
-                        <button type="button" onclick="submitQuestion()">Submit</button>
-                    </form>
-                    <div class="qa-display" id="qa-display">
-                        <h4>Questions from Attendees:</h4>
-                        <ul id="questions-list"></ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
 
     </main>
