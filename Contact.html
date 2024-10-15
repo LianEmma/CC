@@ -16,72 +16,82 @@
 
 
     <header>
-            <nav>
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="images/chorale2.jpg" alt="">
-                    </a>
+        <nav>
+            <!-- Logo Section -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/chorale2.jpg" alt="Logo">
+                </a>
+            </div>
+    
+            <!-- Links Section (Visible on desktop) -->
+            <div class="links">
+                <a href="#">Home</a>
+                <a href="About.html">About</a>
+                <a href="Events.html">Events</a>
+                <a href="Gallery.html">Gallery</a>
+                <a href="Contact.html">Contact</a>
+            </div>
+    
+            <!-- Account Section (Desktop) -->
+            <div class="account">
+                <div class="acc">
+                    <img src="man-placeholder.png" alt="Profile">
+                    <button>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
                 </div>
-                
-                <div class="links">
-                    <a href="index.html">Home</a>
-                    <a href="About.html">About</a>
-                    <a href="Events.html">Events</a>
-                    <a href="Gallery.html">Gallery</a>
-                    <a href="Contact.html">Contact</a>
+                <div class="signs">
+                    <p class="sign-in">Sign In</p>
+                    <p class="sign-up">Sign Up</p>
                 </div>
-
-                <div class="account">
+            </div>
+    
+            <!-- Mobile Hamburger Menu -->
+            <div class="bars">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+    
+            <!-- Drop Down Menu (Mobile) -->
+            <div class="drop-down">
+                <!-- Profile Section with small image for mobile -->
+                <div class="accountD">
                     <div class="acc">
-                       <img src="man-placeholder.png" alt="photo">
+                        <img src="man-placeholder.png" alt="Profile Picture">
                         <button>
                             <i class="fas fa-chevron-down"></i>
-                            <i class="fas fa-chevron-up hidden"></i>
                         </button>
                     </div>
-
-                    <div class="signs">
-                        <p class="sign-in">sign in</p>
-                        <p class="sign-up">sign up</p>
+            
+                    <!-- Account options -->
+                    <div class="signsD dropdown-content">
+                        <p class="sign-in">Sign In</p>
+                        <p class="sign-up">Sign Up</p>
                     </div>
                 </div>
-
-                <!-----------------drop down-------------------->
-                <div class="drop-down">
-
-                    <div class="accountD">
-                        <div class="acc">
-                           <img src="man-placeholder.png" alt="photo">
-                            <button>
-                                <i class="fas fa-chevron-down"></i>
-                                <i class="fas fa-chevron-up hidden"></i>
-                            </button>
-                        </div>
-    
-                        <div class="signsD">
-                            <p class="sign-in">sign in</p>
-                            <p class="sign-up">sign up</p>
-                        </div>
-                    </div>
-
-
-                    <div class="linksD">
-                        <a href="#">Home</a>
-                        <a href="About.html">About</a>
-                        <a href="Events.html">Events</a>
-                        <a href="Gallery.html">Gallery</a>
-                        <a href="Contact.html">Contact</a>
-                    </div>
+            
+                <!-- Navigation Links with Icons -->
+                <div class="linksD">
+                    <a href="index.html"><i class="fas fa-home"></i> <p>Home</p></a>
+                    <a href="About.html"><i class="fas fa-info-circle"></i> <p>About</p></a>
+                    <a href="Events.html"><i class="fas fa-calendar-alt"></i> <p>Events</p></a>
+                    <a href="Gallery.html"><i class="fas fa-images"></i> <p>Gallery</p></a>
+                    <a href="Contact.html"><i class="fas fa-envelope"></i> <p>Contact</p></a>
                 </div>
-                <!------------bars------------->
-                <div class="bars">
-                    <div></div>
-                    <div></div>
-                    <div></div>
+            
+                <!-- Settings with Descriptive Dark Mode -->
+                <div class="settings dropdown-content">
+                    <h4>Settings</h4>
+                    <p>Toggle dark mode to reduce eye strain in low-light environments.</p>
+                    <button class="dark-mode-toggle">Enable Dark Mode</button>
                 </div>
-            </nav>
-
+            </div>
+            
+        </nav>
     </header>
+    
 
         <div class="contact-hero" id="contact-hero">
             <div class="cont">
