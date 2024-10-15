@@ -1,8 +1,10 @@
 
+.Featured-progs h2{
+    padding-bottom: 2rem;
+}
 .arr {
     display: flex;
     gap: 20px;
-    padding-inline: 2rem;
 }
 
 /* mem-slider ensures the active slide takes up 100% width and 100dvh */

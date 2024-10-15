@@ -17,17 +17,19 @@ let Drop = () => {
 
 // Function to handle dropdown animation for the account section (desktop)
 let DropDownCon = () => {
-    const account = document.querySelector(".account");
+    const acc = document.querySelector("#acc");
     const signs = document.querySelector(".signs");
+    const arrowup = document.querySelector(".fa-chevron-up");
+    const arrowdown = document.querySelector(".fa-chevron-down");
 
     // Toggle account sign-in/sign-up with smooth animation
-    account.addEventListener("click", () => {
-        signs.classList.toggle("active");
-
-        if (signs.classList.contains("active")) {
-            signs.style.maxHeight = signs.scrollHeight + "px"; // Expand the dropdown
-        } else {
-            signs.style.maxHeight = "0"; // Collapse the dropdown
+    acc.addEventListener("click", () => {
+        if(!acc.classList.contains("active")){
+            signs.classList.toggle("active");
+            arrowup.classList.add("active");
+            arrowdown.classList.add("hide");
+        }else{
+            signs.classList.remove("active")
         }
     });
 };
