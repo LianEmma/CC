@@ -26,6 +26,14 @@
     transition: width 0.5s ease, height 0.5s ease;
 }
 
+.mem-slider .slide .content h2 {
+   font-size: 2em;
+}
+
+.mem-slider .slide .content p {
+   display: block;
+}
+
 /* Disable the hover scale effect for the active slide in mem-slider */
 .mem-slider .slide:hover {
     transform: none; /* No scaling or translation */
@@ -136,6 +144,14 @@
     position: relative;
     max-width: 100%; /* Ensure content stays within the slide */
     text-align: center;
+}
+
+.slide .content h2{
+    font-size: 1em;
+    text-align: center;
+}
+.slide .content p{
+    display: none;
 }
 
 .slide::before {
