@@ -43,208 +43,289 @@ section{
 .hidden{
     display: none;
 }
-
-header{
+/* Basic styles for header and nav */
+header {
     padding-inline: 4rem;
     background: white;
     box-shadow: var(--light-shadow);
     position: sticky;
-    top: 0%;
+    top: 0;
     z-index: 9999;
 }
 
-nav{
+nav {
     padding-block: 1rem;
     width: 100%;
-    justify-content: space-between;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
-nav .logo{
+nav .logo {
     display: flex;
     align-items: center;
     width: 200px;
-    padding: 0.3rem;
-    color: rgb(49, 53, 56);
-    font-size: 1.2em;
-    font-weight: 700;
     color: orangered;
 }
 
-nav .logo img{
+nav .logo img {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
-nav .links{
+/* Navigation links */
+nav .links {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-nav .links a{
+nav .links a {
     padding: 0.5rem;
-    cursor: pointer;
     text-decoration: none;
     color: rgb(97, 97, 97);
     font-weight: 600;
+    cursor: pointer;
 }
 
-nav .links a:hover{
+nav .links a:hover {
     background: orange;
-    color: aliceblue;
-    border-radius: 2px;
+    color: white;
+    border-radius: 4px;
 }
 
-nav .account{
+/* Account dropdown (Desktop) */
+.account {
     position: relative;
+    cursor: pointer;
 }
 
-.account .acc,.accountD .acc{
+.account .acc {
     display: flex;
-    align-self: center;
-    justify-content: center;
-    gap: 3px;
-    position: relative;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.account .acc img, .accountD .acc img{
+.account img {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.acc button{
-    background: none;
-}
-
-nav .signs p{
-   width: 100px;
-   background: rgb(226, 226, 226);
-   margin-bottom: 3px;
-   padding: 0.5rem;
-   font-size: 1em;
-   font-weight: 600;
-   border-radius: 2px;
-   text-align: center;
-}
-
-.signs .sign-in{
-    background: rgb(255, 72, 72);color: aliceblue;
-}
-
-.signs .sign-up{
-    background: rgb(47, 190, 3);color: aliceblue;
-}
-
-.account .signs, .accountD .signs{
+.account .signs {
     position: absolute;
     display: none;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 0.5rem;
-    right: -25px;
-    top: 50px;
-    border-radius: 4px;
+    right: 0;
+    top: 45px;
+    padding: 1rem;
+    background: white;
     box-shadow: var(--light-shadow);
+    border-radius: 6px;
+    z-index: 999;
 }
 
- .accountD .signsD.active, .account .signs.active{
-    display: flex;
-} 
-
-.account:hover{
-    cursor: pointer;
-}
-
-.account button:hover{
-    cursor: pointer;
-}
-
-.active{
+.account .signs.active {
     display: flex;
 }
 
-/* ///////////Drop Down////////// */
+.signs p {
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #e2e2e2;
+    width: 100px;
+    text-align: center;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
 
-.drop-down{
-    width: 250px;
+.signs .sign-in {
+    background: #ff4848;
+    color: white;
+}
+
+.signs .sign-up {
+    background: #2fbe03;
+    color: white;
+}
+
+/* Main dropdown (Mobile) */
+.drop-down {
+    display: none;
+    flex-direction: column;
     position: absolute;
     top: 45px;
-    right: 0%;
-    display: none;
+    right: 0;
+    width: 300px;
+    max-height: 450px;
+    overflow-y: auto;
+    background: var(--primary-dark);
+    color: white;
+    backdrop-filter: blur(10px);
+    padding: var(--padding);
+    box-shadow: var(--dark-shadow);
+    border-radius: var(--border-radius);
+    z-index: 9999;
+    transition: all 0.3s ease;
+}
+
+/* Account dropdown picture (Mobile) */
+.accountD .acc {
+    display: flex;
+    align-items: center;
     gap: 10px;
-    flex-direction: column;
-    background: #333;
-    padding: 0.8rem;
+    margin-bottom: 1rem;
 }
 
-.drop-down.active{
-    display: flex;
+.accountD .acc img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-.linksD{
-    display: flex;
-    flex-direction: column;
-}
-
-.linksD a{
-    width: 100%;
-    padding: 0.5rem;
-    text-decoration: none;
-    color: aliceblue;
-    background: grey;
-    margin-bottom: 1px;
-}
-
-.linksD a:hover{
-    background: #a7a7a7;
-}
-
-/* ///////////////bars/////// */
-.bars{
-    display: none;
+/* Add the bars (hamburger menu) for mobile */
+.bars {
+    display: none; /* Hidden on desktop */
     align-items: center;
     flex-direction: column;
-    position: absolute;
-    right: 0px;
-    width: 100px;
-    gap: 1px;
-}
-
-.bars > div{
-    width: 30px;
-    height: 5px;
-    margin-bottom: 2px;
-    border: 1px solid white;
-    background: blueviolet;
-}
-
-.bars:hover{
+    gap: 5px;
     cursor: pointer;
+    z-index: 9999; /* Ensure it stays above other elements */
 }
 
+.bars > div {
+    width: 30px;
+    height: 4px;
+    background: #181616;
+    color: #181616;
+    border-radius: 2px;
+}
+
+/* Show the bars on smaller screens */
 @media screen and (max-width: 764px) {
-    header{
-        padding-inline: 0.5rem;
-    }
-    header nav{
-        padding-block: 0.5rem;
-    }
-    .bars{
+    .bars {
         display: flex;
     }
 
-    nav .account{
+    /* Hide the normal nav links */
+    nav .links {
         display: none;
+    }
+}
+
+/* Show the dropdown when active */
+.drop-down.active {
+    display: flex;
+}
+
+
+/* Responsive adjustments: Center profile on mobile */
+@media screen and (max-width: 764px) {
+    .account{
+        display: none;
+    }
+    .accountD .acc {
+        flex-direction: column;
+        align-items: center;
     }
 
-   nav .links{
-        display: none;
+    .accountD .acc img {
+        width: 50px;
+        height: 50px;
     }
+
+    .drop-down {
+        width: 100%;
+        max-width: 100%;
+        right: 0;
+        left: 0;
+        top: 60px;
+        padding-inline: 1rem;
+    }
+
+    nav .links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+/* Links with icons in dropdown */
+.linksD {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.linksD a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.5rem;
+    color: var(--primary-light);
+    text-decoration: none;
+    font-size: 1rem;
+    background: var(--light-grey);
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease;
+}
+
+.linksD a i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.linksD a:hover {
+    background: var(--orange);
+    color: white;
+}
+
+/* Settings section */
+.settings {
+    border-top: 1px solid var(--light-grey);
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+/* Dark Mode toggle */
+.settings h4 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-light);
+}
+
+.settings p {
+    margin-bottom: 1rem;
+    color: var(--light-grey-text);
+    font-size: 0.9rem;
+}
+
+.dark-mode-toggle {
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    background-color: var(--green);
+    color: var(--primary-light);
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    background-color: var(--orange);
+    color: white;
+}
+
+/* Active dropdown visibility */
+.dropdown-content.active {
+    display: flex;
+    opacity: 1;
+    flex-direction: column;
+    gap: var(--gap);
 }
 
 /* 

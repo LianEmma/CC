@@ -1,47 +1,58 @@
+// Function to handle dropdown animation for the hamburger menu
+let Drop = () => {
+    const dropDown = document.querySelector(".drop-down");
+    const bars = document.querySelector(".bars");
 
+    // Toggle drop-down menu with a smooth animation
+    bars.addEventListener("click", () => {
+        dropDown.classList.toggle("active");
 
-let Drop =()=>{
-    let DropDown = document.querySelector(".drop-down");
-    let bars = document.querySelector(".bars");
-    
-    bars.addEventListener("click",()=>{
-       DropDown.classList.toggle("active");
-        console.log(DropDown)
-    })
-}
-
-Drop()
-
-let ProfDrop=()=>{
-    let accountD = document.querySelector(".accountD");
-    let signsD = document.querySelector(".signsD");
- 
-
-    accountD.addEventListener("click",()=>{
-        signsD.classList.toggle("active")
-        console.log(signsD)
-    })
-
-}
-
-let DropDownCon=()=>{
-    let account = document.querySelector(".account");
-    let signs = document.querySelector(".signs");
-
-    account.addEventListener("click",()=>{
-        if (!signs.classList.contains("active")) {
-            signs.classList.toggle("active");
-        }else{
-            signs.classList.remove("active");
+        if (dropDown.classList.contains("active")) {
+            dropDown.style.maxHeight = dropDown.scrollHeight + "px"; // Expand the dropdown
+        } else {
+            dropDown.style.maxHeight = "0"; // Collapse the dropdown
         }
+    });
+};
 
-        console.log(signs)
-        return;
-    })
-}
-DropDownCon()
-ProfDrop()
+// Function to handle dropdown animation for the account section (desktop)
+let DropDownCon = () => {
+    const account = document.querySelector(".account");
+    const signs = document.querySelector(".signs");
 
+    // Toggle account sign-in/sign-up with smooth animation
+    account.addEventListener("click", () => {
+        signs.classList.toggle("active");
+
+        if (signs.classList.contains("active")) {
+            signs.style.maxHeight = signs.scrollHeight + "px"; // Expand the dropdown
+        } else {
+            signs.style.maxHeight = "0"; // Collapse the dropdown
+        }
+    });
+};
+
+// Function to handle dropdown animation for the account section (mobile)
+let ProfDrop = () => {
+    const accountD = document.querySelector(".accountD");
+    const signsD = document.querySelector(".signsD");
+
+    // Toggle account sign-in/sign-up with smooth animation (mobile)
+    accountD.addEventListener("click", () => {
+        signsD.classList.toggle("active");
+
+        if (signsD.classList.contains("active")) {
+            signsD.style.maxHeight = signsD.scrollHeight + "px"; // Expand the dropdown
+        } else {
+            signsD.style.maxHeight = "0"; // Collapse the dropdown
+        }
+    });
+};
+
+// Call the functions on page load
+Drop();
+DropDownCon();
+ProfDrop();
 
 
 let heroSlider = document.querySelector(".hero-slider");
